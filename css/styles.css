@@ -99,6 +99,46 @@ body {
   background-color: #fff;
 }
 
+.card-icon {
+  margin: 10px auto auto auto;
+}
+
+.card-description{
+  margin: 10px auto auto auto;
+  font-size: small;
+}
+
+.card-description.lenguage-description{
+  margin: 10px auto auto auto;
+  font-size:x-large
+}
+
+.row-star{
+  align-items: center;
+  display: block;
+}
+
+.column-star{
+  margin: auto;
+}
+
+.fa-star-half-alt
+{
+  height: 20px;
+  margin: 5px auto;
+}
+
+.fa-star{
+  height: 20px;
+  margin: 5px auto;
+}
+.svg-inline--fa.fa-w-17{
+  width:0.5em;
+}
+
+.svg-inline--fa.fa-w-18{
+  width:0.5em;
+}
 /* ---------------------- FIN CUSTOMS -------------------------- */
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -4397,6 +4437,8 @@ input[type=button].btn-block {
 
 .card-text:last-child {
   margin-bottom: 0;
+  font-size: 0.8rem;
+  text-align: justify;
 }
 
 .card-link:hover {
@@ -4456,8 +4498,9 @@ input[type=button].btn-block {
 
 .card-img,
 .card-img-top {
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
+  display: block;
+  align-items: center;
+
 }
 
 .card-img,
