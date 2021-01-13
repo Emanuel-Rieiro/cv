@@ -139,6 +139,16 @@ body {
 .svg-inline--fa.fa-w-18{
   width:0.5em;
 }
+
+.wierd-link{
+  visibility: hidden;
+}
+
+.counterimg{
+  position: relative;
+  margin-left: 93%;
+  margin-bottom: 5px;
+}
 /* ---------------------- FIN CUSTOMS -------------------------- */
 
 [tabindex="-1"]:focus:not(:focus-visible) {
