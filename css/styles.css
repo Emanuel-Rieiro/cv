@@ -149,6 +149,47 @@ body {
   margin-left: 44%;
   margin-bottom: 10px;
 }
+
+.pautos-leftbar{
+  margin-top: 125%;
+}
+.not-a{
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  font-size: 1rem;
+  color:white;
+}
+
+#page-pautos{
+  padding-left: 0rem;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.back{
+  text-align: center;
+}
+
+.title{
+  text-align: justify;
+  font-size: 4.5rem;
+}
+
+.border-color{
+  border: 20px solid #bd5d38;
+}
 /* ---------------------- FIN CUSTOMS -------------------------- */
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -2977,7 +3018,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-lg, .btn-group-lg > .btn {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 8rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem;
@@ -10200,6 +10241,33 @@ section.resume-section .resume-section-content {
     padding-left: 3rem;
     padding-right: 3rem;
     padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+section.resume-section-car-first {
+  display: flex;
+  align-items: normal;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  max-width: 75rem;
+}
+section.resume-section-car-first .resume-section-content {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  section.resume-section-car-first {
+    min-height: 100vh;
+  }
+}
+@media (min-width: 992px) {
+  section.resume-section-car-first {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 10rem;
     padding-bottom: 5rem;
   }
 }
