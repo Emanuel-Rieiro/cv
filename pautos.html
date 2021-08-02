@@ -84,7 +84,7 @@
                                 <p>¿Cuál es la estrategia? Crearemos un documento txt conteniendo los links que nuestro robot va a visitar:</p>
                             </div>
                         </div>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/urls.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/urls.png" alt="sadasdasda" /></span>
                         <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                             <div class="flex-grow-1 text-justify">
                                 <p>Una pregunta a responder es, por que estamos dividiendo las visitas webs en tantos links? </p>
@@ -93,13 +93,13 @@
                                 <p>Siguiendo el orden que se muestra a continuación, empezando por 1, moviendose a 2, 3 y asi sucesivamente.</p>
                             </div>
                         </div>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/autos-pagina.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/autos-pagina.png" alt="A" /></span>
                         <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                             <div class="flex-grow-1 text-justify">
                                 <p>En la página de cada automotor que visitamos sacaremos datos de importancia que podemos encontrar en 3 elementos:</p>
                             </div>
                         </div>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/data-pagina.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/data-pagina.png" alt="" /></span>
                         <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                             <div class="flex-grow-1 text-justify">
                                 <ul>
@@ -122,12 +122,12 @@
                         </ol>
                         <p>Para ahorrarnos tiempo, simultáneamente iniciaremos nuestro robot pilotando google chrome y cargaremos los url que están en nuestro archivo “links.txt” además de instanciar nuestra clase.</p>  
                         <p>Nuestro código se debería ver así:</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/webscraper-1.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/webscraper-1.png" alt="" /></span>
                         <p>Empezaremos definiendo la función get_cars, este debe de devolver un listado de todos los automotores listados en una página determinada.</p>
                         <p>Para nuestra suerte los autos se encuentra en etiquetas html de ‘ol’ lo cual facilita obtener sus url con un simple for loop.</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/webscraper-2-get_cars.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/webscraper-2-get_cars.png" alt="" /></span>
                         <p>La función go_to_car tendrá como parámetro adicional uno de los elementos que obtuvimos y guardamos en nuestra función get_cars, buscara su atributo ‘href’ y lo abrirá en otra pestaña.</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/webscraper-3-go_to_car.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/webscraper-3-go_to_car.png" alt="" /></span>
                         <p>La siguiente función a completar es get_car_data, esta es la función más compleja en nuestra clase ya que debe obtener la información de 3 elementos en la página del automóvil en el que nos encontramos y guardarlos de una manera que nos permita a nosotros incorporarlos en un dataframe a futuro.</p>
                         <p>Para esto he decidido trabajar con diccionarios, pero esta es una de muchas formas de hacerlo.</p>
                         <p>Primero usaremos la librería BeautifulSoup para obtener el código html de la página en la que nos encontramos. A partir de esto podemos fácilmente identificar los elementos del nombre, el precio y la tabla de características, los cuales guardaremos en las variables car_name, price_tag y car_data_sheet.</p>
@@ -135,14 +135,14 @@
                         <p>Finalmente la parte más difícil es el elemento car_data_sheet ya que consta de varias filas la cuales necesitamos almacenar, una dificultad adicional de este elemento es que no posee un largo determinado. Hay automotores que ni siquiera tienen una ficha de características!</p>
                         <p>Para almacenar este elemento, crearemos un loop por cada una de las filas de nuestro elemento car_data_sheet y guardaremos el nombre de la característica y su valor en nuestro diccionario.</p>
                         <p>Nuestro código se debería ver así:</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/webscraper-4-get_car_data.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/webscraper-4-get_car_data.png" alt="" /></span>
                         <p>Nuestras dos funciones restantes no son nada especial, necesitamos algo que nos devuelva de la url del automóvil en la que estamos al menú inicial y otra que navegue hacia la siguiente página una vez que obtuvimos la información de todos los automóviles en una página determinada.</p>
                         <p>La única consideración a tener que debemos informarle de alguna manera a nuestra clase cuando no quedan más páginas en la url de nuestro links.txt en la que estamos para poder movernos a la siguiente.</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/webscraper-5-return_next.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/webscraper-5-return_next.png" alt="" /></span>
                         <p>Finalmente lo último que necesitamos es un bucle que ejecute nuestras funciones de manera recurrente y habríamos terminado.</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/webscraper-6-loop.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/webscraper-6-loop.png" alt="" /></span>
                         <p>La ejecución de esta script puede demorar horas o incluso días dependiendo de la velocidad de su ordenador y su conexión, pero al terminar obtendrá un archivo de Excel en el siguiente formato:</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/cars_data.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/cars_data.png" alt="" /></span>
                         <p>Puedes descargar una copia directamente desde el repositorio referenciado al final del proyecto o mediante el siguiente <a href='https://github.com/Emanuel-Rieiro/Mercado-Libre/raw/main/cars_data.xlsx'> Link </a></p>
                     </div>
                 </section>
@@ -156,9 +156,9 @@
                         <p>Esta fase es el paso previo a la creación del modelo, aquí realizaremos transformaciones para ajustar nuestro dataset y elegiremos los mejores features que nos ayuden a describir el precio de un automotor.</p>
                         <p>Empezaremos viendo las primeras filas del dataset con el que estamos trabajando así como una descripción de los datos que hay en las columnas que tenemos.</p>
                         <p>Primeras 5 filas:</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-ver-1.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-ver-1.png" alt="a" /></span>
                         <p>Descripción de columnas:</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-ver-2.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-ver-2.png" alt="a" /></span>
                         <p>Hagamos un par de inferencias iniciales.</p>
                         <ul>
                             <li class="mb-3">Tenemos 10844 nombres de automotores únicos, esto puede parecer mucho, pero veremos que en realidad, es bastante poco.</li>
@@ -168,7 +168,7 @@
                             <li class="mb-3">Nuestro campo patente está vacío para todos nuestros automotores.</li>
                         </ul>
                         <p>Basados en las observaciones, borraremos el campo de Color por ser un campo no relevante y con muchos valores faltantes y el campo Patente por estar completamente vacío.</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-puertas.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-puertas.png" alt="a" /></span>
                         <p>En la imagen anterior observamos que en nuestro dataset solo hay un automóvil con puertas menores o iguales a 0 y se trata de un 0km por lo cual procederemos a quitarlo de nuestro dataset.</p>
                         <p>Bueno, mirando los campos de nuestro archivo la pregunta más importante a hacer es: ¿Qué paso con la marca y el modelo que obtuvimos de la ficha técnica de los vehículos?</p>
                         <p>Muchos vehículos no tienen ficha técnica, y los que tienen, en su mayoría, no tienen marca ni modelo en ella.</p>
@@ -177,60 +177,60 @@
                         <p>¿Es esta una buena solución? No, de hecho es una solución mala, intencionada. Habría sido más fácil conservar estos campos, y para las filas en mi dataset que no tuviera estos datos intentar inferir su marca y modelo a partir de su título, pero tratándose de un estudio experimental, decidí tomar el desafío completo.</p>
                         <p>Mi primera impresión mirando el campo de Nombre del vehículo para inferir el modelo y la marca es separar el nombre por tabuladores y asumir que la primer palabra va a ser la marca y la segunda el modelo.</p>
                         <p>Veamos como nos va tomando la primer palabra como marca:</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-1-marca-modelo.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-1-marca-modelo.png" alt="a" /></span>
                         <p>Solo 303 resultados distintos y bastantes marcas es un muy buen resultado inicial para nuestro supuesto, pero veamos si lo podemos trabajar un poco más.</p>
                         <p>Intentemos borrando palabras iniciales que obviamente no son marcas como: Vendo, Camioneta, Nuevo, Nueva, Oportunidad, etc...</p>
                         <p>Una vez realizada esa transformación crearemos una columna Marca a la cual le asignaremos el resultado, veamos el top 5 marcas que mas se repiten:</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-2-marca-modelo.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-2-marca-modelo.png" alt="a" /></span>
                         <p>No se ve mal, pero realizaremos una última transformación, vamos a quedarnos solo con las Marcas que aparezcan por lo menos 9 veces en nuestro dataset, asi limpiaremos la gran mayoría de posibles errores borrando la menor cantidad de líneas posibles:</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-3-marca-modelo.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-3-marca-modelo.png" alt="a" /></span>
                         <p>Solo 69 Marcas únicas quedan en nuestro dataset, una gran reducción respecto a nuestras 303 iniciales, pero todavía podemos pulir un par de detalles extra. Por ejemplo, podemos ver que la marca BMW y Mercedes-Benz aparecen repetidasmente entre otras.</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-4-marca-modelo.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-4-marca-modelo.png" alt="a" /></span>
                         <p>Realizando los cambios correspondientes logramos reducir nuestro campo marca a 61 únicos referentes, creo que podríamos haber hecho un mejor trabajo, pero esto va a tener que ser suficiente.</p>
                         <p>Realizaremos básicamente el mismo procedimiento para el modelo pero teniendo como referencia esta vez, la segunda palabra del nombre.</p>
                         <p>Los resultados son los siguientes:</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-5-marca-modelo.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-5-marca-modelo.png" alt="a" /></span>
                         <p>Si quieren mas detalles de como llegamos a ese resultado, recomiendo leer el script completo que se encuentra en el repositorio de github, el mismo se encuentra al final del documento.</p>
                         <div class="subheading mb-3">Lidiando con valores faltantes</div>
                         <p>Como ya fue dicho antes, ciertas columnas de nuestro dataset contiene valores nulos, veamos cuantos tienen cada uno de ellas:</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-6-null.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-6-null.png" alt="a" /></span>
                         <p>Borraremos las 6 filas con valores nulos de puertas y modelo. Y un poco más doloroso, borraremos las columnas de Transmisión, Motor y Tipo de Carrocería por tener demasiados valores nulos.</p>
                         <div class="subheading mb-3">Formato de columnas</div>
                         <p>Las columnas de precio y Kilómetros tienen dificultades en su formato.</p>
                         <p>Para empezar necesiamos que los datos en la columna Kilómetros sean númericos, para ello vamos a borrar la palabra 'km' de todos su datos y borrar los puntos.</p>
                         <p>Para precio también borraremos los puntos y nos bastara con eso.</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-7-formato.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-7-formato.png" alt="a" /></span>
                         <div class="subheading mb-3">Transformando Precios a dólares </div>
                         <p>Para nuestros precios donde la moneda es '$' los dividermos por 44 y borraremos la columna moneda de nuestro dataset.</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-8-dolar.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-8-dolar.png" alt="a" /></span>
                         <div class="subheading mb-3">Explorando PDFs</div>
                         <p>Ahora pasaremos a explorar los PDF de nuestras variables numéricas: Precio, Año y Kilómetros.</p>
                         <p>Empezemos por gráficar la distribución de nuestra variable de precio:</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-9-districuion-precio.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-9-districuion-precio.png" alt="a" /></span>
                         <p>Bueno, eso esta bastante mal. ¿Por que es tan malo el gráfico de distribución de nuestra variable precio?</p>
                         <p>Podemos encontrar la explicación en los 'outlier' que tenemos dentro de nuestros datos de precios recolectados, ¿Que quiero decir? Algunos automóviles con precios extremadamente altos o extremadamente bajos estan molestando la correcta apreciación de nuestra variable.</p>
                         <p>La ocurrencia de outliers puede ser un problema para nuestro modelo, llevándolo a cometer predicciones menos acertadas, encarguémonos de ellos.</p>
                         <p>Realizaremos dos cambios sencillos, borraremos todos los automóviles que estén en el percentil 2% más altos de precios, y además todos los que tengan un precio menor a 1500.</p>
                         <p>Veamos la distribución de nuestros precios después de aplicados los cambios:</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-10-districuion-precio.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-10-districuion-precio.png" alt="a" /></span>
                         <p>Mucho mejor, la distribución de nuestros precios de automotores tiene una apariencia similar a una distribución exponencial y tiene su pico cerca de los 10.000 dólares.</p>
                         <p>Realizaremos transformaciones similares a nuestro campo de Kilómetros y Año para obtener PDFs mas limpios y lidiar con outliers.</p>
                         <p>Estas son las distribuciones que obtenemos como resultado antes y después:</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-11-districuion-otros.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-11-districuion-otros.png" alt="a" /></span>
                         <div class="subheading mb-3">Revisando supuesto de Linealidad</div>
                         <p>Como nuestro modelo va a ser una regresión simple revisemos el supuesto de linealidad entre nuestras variables:</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-12-linealidad.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-12-linealidad.png" alt="a" /></span>
                         <p>Pareciera que nuestra variable precio no tiene una relación muy lineal con el resto de nuestras variables numéricas, por suerte, sabemos gracias a nuestro estudio de los PDF que el precio tiene una distribución exponencial, intentemos aplanar su efecto trabajando con su logaritmo.</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-13-linealidad.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-13-linealidad.png" alt="a" /></span>
                         <p>No el mejor de los resultados pero si pareciere haber mejorado la relación lineal entre nuestras variables numéricas, mientras más dirección diagonal tenga nuestra data, mejor va a ser la relación lineal entre las variables.</p>
                         <div class="subheading mb-3">Multicolinearidad</div>
                         <p>Necesitamos detectar si existe algún tipo de Multicolinearidad :</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-14-multicolinariedad.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-14-multicolinariedad.png" alt="a" /></span>
                         <p>Valores con VIF menor a 5 se consideran relevantes por lo cuál parciera que vamos a poder hacer uso completo de todas nuestras variables.</p>
                         <div class="subheading mb-3">Creación de dummies</div>
                         <p>Finalmente llegamos al último paso del pre procesamiento de datos, como nuestras variables de marca y modelo son categóricas precisaremos crear dummies para ellas. </p>
                         <p>Crear dummies significa crear variables ficticias para cada uno de nuestras marcas y modelos que tenemos. Estas variables tomarán el valor de 1 o 0 para cada uno de nuestros automotores, dependiendo si se trata de su marca o modelo o no.</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-15-dummies.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/procesamiento-15-dummies.png" alt="a" /></span>
                     </div>
                 </section>
                 <section class="resume-section" id="modelo">
@@ -241,14 +241,14 @@
                         <p>Para lograrlo vamos a usar distintos features que recolectamos y construimos: El año del vehículo, su kilometraje, su cantidad de puertas, su marca y su modelo.</p>
                         <p>Teniendo esto en cuenta, manos a la obra.</p>
                         <div class="subheading mb-3">Declaración inputs y targets</div>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/modelo-1-targets.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/modelo-1-targets.png" alt="a" /></span>
                         <div class="subheading mb-3">Escalando columnas numéricas</div>
                         <p>Como esencialmente lo que nuestro modelo va a hacer es calcular distancias entre nuestras variables, necesitamos normalizar nuestros features para que cada uno tenga un peso relativo igual y el modelo no tenga problemas estableciendo los weights.</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/modelo-2-scalar.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/modelo-2-scalar.png" alt="a" /></span>
                         <div class="subheading mb-3">Separación y creación del modelo</div>
                         <p>Primero separaremos nuestros dataset en 2 partes. Con una vamos a entrenar nuestro modelo y la otra vamos a usarla para evaluarlo.</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/modelo-3-separate.png" alt="" /></span>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/modelo-3-modelo.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/modelo-3-separate.png" alt="a" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/modelo-3-modelo.png" alt="a" /></span>
                         <p>En el gráfico anterior podemos ver en el eje vertical nuestras predicciones y en el horizontal el valor real, mientras más diagonal es la dirección de los puntos, más exacto fue nuestro modelo.</p>
                         <p>En el dataset de entrenamiento nuestro R-squared es de 0.88 aproximadamente, lo cual quiere decir que nuestro modelo llega a explicar un 88% de la variación del precio, no está mal.</p>
                         <p>A simple vista podemos decir que las predicciones no fueron tan malas, pero esto es sobre el dataset de entrenamiento sobre el que fue entrenado, necesitaremos probar nuestro modelo en el dataset que específicamente separamos para prueba en orden de saber que tan bueno es nuestro modelo.</p>
@@ -257,16 +257,16 @@
                 <section class="resume-section" id="resultados">
                     <div class="resume-section-content">
                         <h2 class="mb-5">Resultados</h2>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/modelo-4-testing.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/modelo-4-testing.png" alt="a" /></span>
                         <p>Nada mal! Nuestro gráfico de predicciones y objetivos sigue manteniendo una orientación diagonal lo cual quiere decir que nuestro modelo pudo predecir precios con una buena exactitud.</p>
                         <p>Analicemos más en detalle nuestras predicciones y nuestros objetivos en el dataset de testeo:</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/modelo-5-descripcion.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/modelo-5-descripcion.png" alt="a" /></span>
                         <p>Veamos, primero que nada, nuestro dataset de testeo se conforma de 2997 únicos automotores, el precio real promedio de estos automotores es de 15034.346 dólares, el precio promedio de nuestras predicciones es de 14489.260. Solo una diferencia de 3.6% entre el promedio de nuestros precios reales y nuestras predicciones!</p>
                         <p>Probemos ahora a graficar nuestras diferencias porcentuales unitarias entre el valor real y el valor predicho para cada uno de los automotores eliminando previamente los outliers:</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/modelo-6-diferencias.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/modelo-6-diferencias.png" alt="a" /></span>
                         <p>Podemos observar que nuestro PDF de error porcentual tiene una apariencia exponencial y que tiene su pico mayor en la diferencia de casi 10%, esto quiere decir que una diferencia de casi 10% es la más esperada para cada predicción singular de cada uno de nuestros automotores.</p>
                         <p>Finalmente, veamos una distribución de nuestro error porcentual de predicción:</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/modelo-7-errores.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/modelo-7-errores.png" alt="a" /></span>
                     </div>
                 </section>
                 <section class="resume-section" id="extras">
@@ -274,9 +274,9 @@
                         <h2 class="mb-5">Extras</h2>
                         <p>Para finalizar, demos datos y links de interés.</p>
                         <p>Usemos nuestro dataset inicial para calcular cuántos años y kilómetros de uso tienen los vehículos usados publicados para la venta:</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/extras-1.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/extras-1.png" alt="a" /></span>
                         <p>Veamos dentro de los vehículos usados, a la venta, cuales son la marca y el modelo más vendidos:</p>
-                        <span class="d-none d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/extras-2.png" alt="" /></span>
+                        <span class="text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/pautos/extras-2.png" alt="a" /></span>
                     </div>
                 </section>
                 <section class="resume-section" id="consideraciones">

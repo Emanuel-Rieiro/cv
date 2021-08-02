@@ -189,6 +189,7 @@ body {
 
 .border-color{
   border: 20px solid #bd5d38;
+  position:relative;
 }
 /* ---------------------- FIN CUSTOMS -------------------------- */
 
