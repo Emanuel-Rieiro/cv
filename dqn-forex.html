@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Emanuel Rieiro | Curriculum</title>
+        
+        <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Emanuel Rieiro | Curriculum Vitae" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:description" content="Soy un egresado de Contador Público en la Udelar con amplio estudio en el area de la programación y una pasión por la estadística. Mi perfil esta orientado a la analítica de negocios y al desarrollo de herramientas que permitan controlar, medir y aplicar las políticas organizacionales de manera efectiva para mejorar el rendimiento del negocio." />
+        <meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://emanuel-rieiro.github.io/cv/assets/pautos/frontpage.png" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://emanuel-rieiro.github.io/cv/" />
+
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navegador-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Emanuel Rieiro</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2 img-width" src="assets/img/profile.jpg" alt="" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#resumen">Resumen</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#ambiente">Ambiente</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#procesamiento">Pre-Procesamiento</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#modelo">Modelaje</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#entrenamiento">Entrenamiento</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#resultados">Resultados</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#volver">Volver</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Contenido-->
+        <div class='wrapper mb-6'>
+            <div class="container-fluid p-0">
+                
+                <!-- Título -->
+                <section class="resume-section" id="resumen">
+                    <div class="resume-section-content">
+                        <h1 class="title mb-6">
+                            Trading en forex con 
+                            <span class="text-primary">DQN</span>
+                        </h1>
+                        <h3 class="mb-3">Resumen e Introducción</h3>
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                            <div class="flex-grow-1 text-justify">
+                                <p>Este es un proyecto introductorio básico, y su único objetivo es el aprendizaje del autor. Por lo tanto, no me centrare en crear un modelo complejo, sino en el funcionamiento del agente en el ambiente.</p>
+                                <p>La base del algoritmo usado fue obtenido del siguiente ejemplo en la web de <a href="https://keras.io/examples/rl/deep_q_network_breakout/">keras</a> y adaptado para ser usado en forex en vez de un juego de atari.</p>
+                                <p>Para este proyecto, descargare información de minuto del par EURUSD de la web <a href="https://www.fxdd.com/mt/en/resources/mt4-one-minute-data">fxdd</a> y entrenare un agente para tradear de manera autónoma.</p>
+                                <p>El proyecto se subdivide en 4 etapas:</p>
+                                <ul>
+                                    <li class="mb-3">Creación del ambiente en cual se desempeñara el agente.</li>
+                                    <li class="mb-3">Transformación de la información de minuto del par EURUSD a formato por hora.</li>
+                                    <li class="mb-3">Creación de un modelo sequencial en keras el cual sera usado para entrenar nuestro agente.</li>
+                                    <li class="mb-3">Entrenar el agente usando el modelo definido en el ambiente creado.</li>
+                                    <li class="mb-3">Testear los resultados en un conjunto de datos que el agente no ha visto antes.</li>
+                                </ul>
+                                <p>Puede saltearse a cualquiera de las etapas a partir del menú de selección a la izquierda, o en caso de estar en un celular, desde el menú desplegable en la parte superior de la pantalla.</p>
+                                <p>Lee hasta el final ¡Los resultados te dejaran sorprendido!</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <hr class="m-0" />
+
+                <!-- Ambiente -->
+                <section class="resume-section" id="ambiente">
+                    <div class="resume-section-content">
+                        <h2 class="mb-5">Ambiente</h2>
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                            <div class="flex-grow-1 text-justify">
+                                <p>El ambiente es el entorno virtual con el cual nuestro agente va a interactuar, realizando sus acciones en base a la información que el mismo le propone y, de ser necesario, cambiando según la acción tomada por el agente.</p>
+                                <p>En nuestro caso el ambiente va a tener que simular toda la interacción con el par que vamos a tradear.</p>
+                                <p>Como mínimo nuestro ambiente debe:</p>
+                                <ul>
+                                    <li class="mb-3">Darnos información sobre si mismo de manera tal que el agente pueda usarla para tomar decisiones.</li>
+                                    <li class="mb-3">Devolvernos el resultado de la acción que tomamos.</li>
+                                </ul>
+                                <p>En nuestro caso las acciones que vamos a poder tomar van a ser:</p>
+                                <ul>
+                                    <li class="mb-3">Buy</li>
+                                    <li class="mb-3">Sell</li>
+                                    <li class="mb-3">Hold</li>
+                                </ul>
+                                <p>Antes de iniciar, para programar mi ambiente, tome como inspiración el ambiente programado en el curso: <a href="https://www.udemy.com/course/artificial-intelligence-reinforcement-learning-in-python/">Artificial Intelligence: Reinforcement Learning in Python </a> dictado en udemy. </p>
+                                <p>Iniciamos el desarrollo de nuestro ambiente definiendo la cantidad de pasos que va a dar nuestro agente y la cantidad de indicadores que vamos a usar.</p>
+                                <p>En nuestro caso, vamos a usar 23 indicadores. De estos, 20 van a pertenecer a representar los 20 precios de apertura anteriores, 2 para representar categóricamente si tenemos una orden de compra o venta abierta, y el va a tener el valor de nuestro trade abierto actualmente.</p>
+                                <p>Posteriormente definimos nuestras acciones, el tamaño de nuestro espacio de acciones y el estado inicial de nuestras variables de posición.</p>
+                                <p>Finalmente llamamos el procedimiento de nuestra clase: reset(). El cual va a dejar todas las variables de nuestro entorno a momento 0.</p>
+                                <p>Iniciación de nuestra clase de ambiente:</p>
+                                <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/dqn-forex/ambiente-1.png" alt="" /></span>
+                                <p>Función que ejecutamos al final para llevarnos al momento 0 del ambiente:</p>
+                                <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/dqn-forex/ambiente-2.png" alt="" /></span>
+                                <p>Notese que la función reset previamente definida devuelve una llamada a otra función de nuestro ambiente llamada _get_obs()</p>
+                                <p>La función _get_obs va a devolver los 23 indicadores que representan nuestro estado actual en el ambiente. Estos indicadores van a ser los que vamos a usar para alimentar nuestro modelo:</p>
+                                <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/dqn-forex/ambiente-3.png" alt="" /></span>
+                                <p>Ahora vamos a crear nuestras funciones para abrir y cerrar posiciones en el ambiente.</p>
+                                <p>Pero antes de mostrarlas, hay un detalle sobre como nuestra agente va a interpretar sus acciones.</p>
+                                <p>Una vez abierta nuestra posición, para mantenerse abierta, nuestro agente debera repetir la acción de la posición hasta que decida cambiarla.</p>
+                                <p>Es decir, si nuestro agente decide realizar una posición de compra, en cada paso que da nuestro agente en el ambiente, vamos a tener que repetir la acción de compra si queremos mantener esta acción abierta.</p>
+                                <p>Si decidimos abrir una posición de venta o ninguna de las dos, entonces nuetro agente va a cerrar la posición de compra que tenemos abierta.</p>
+                                <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/dqn-forex/ambiente-5.png" alt="" /></span>
+                                <p> También vamos a necesitar una función que retorne el valor actual en dinero de mi posición:</p>
+                                <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/dqn-forex/ambiente-4.png" alt="" /></span>
+                                <p>Finalmente, necesitamos definir la función que se encarga de interactuar directamente con nuestro ambiente, haciendo que pase de un estado a otro.</p>
+                                <p>Esta función toma como parametro una acción y una vez computada su efecto en el estado actual de nuestro ambiente, nos regresa el nuevo estado resultante de esa acción, el reward, y si fue el último paso:</p>
+                                <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/dqn-forex/ambiente-6.png" alt="" /></span>
+                                <p>Finalmente, nuestra función de ambiente se debería ver algo así:</p>
+                                <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/dqn-forex/ambiente-7.png" alt="" /></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <hr class="m-0" />
+
+                <!-- Procesamiento -->
+                <section class="resume-section" id="procesamiento">
+                    <div class="resume-section-content">
+                        <h2 class="mb-5">Pre-Procesamiento</h2>
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                            <div class="flex-grow-1 text-justify">
+                                <p>Nuestro dataset de interes sobre el que vamos a estar trabajando es el par EURUSD cuyos historial vamos a obtener de la siguiente <a href="https://www.fxddtrading.com/bm/en">web</a>.</p>
+                                <p>Nota: al momento de realizar este proyecto la información disponible va hasta mediados de enero de 2022.</p>
+                                <p>El único problema con nuestro set de datos descargado es que la información es minuto a minuto, y nosotros solo vamos a trabajar con 20 indicadores de la serie temporal!</p>
+                                <p>Es muy poco probable que la información de los 20 minutos anteriores le sea de mucho ayuda a nuestro agente, por lo cuál vamos a convertir la información de minuto a hora.</p>
+                                <p>Para ello creamos la siguiente función, que computa los valore de apertura, volumen y cierre de nuestra data por minuto a nivel hora.</p>
+                                <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/dqn-forex/preprocesamiento-1.png" alt="" /></span>
+                                <p>Lamentablemente después de intentar entrenar el modelo, me fue imposible usar todo el período, por lo cual voy a qudarme únicamente con 2020 en adelante.</p>
+                                <p>Usaremos del 01/01/2020 al 31/05/2021 para entrenar nuestro modelo, y del 01/06/2021 en adelante para testearlo.</p>
+                                <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/dqn-forex/preprocesamiento-2.png" alt="" /></span>
+                                <p>Finalmente creamos una función para que nos de una ventana movil de los precios de cierre de las 20 horas previas para alimentar nuestro modelo.</p>
+                                <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/dqn-forex/preprocesamiento-3.png" alt="" /></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Modelo -->
+                <section class="resume-section" id="modelo">
+                    <div class="resume-section-content">
+                        <h2 class="mb-5">Modelo</h2>
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                            <div class="flex-grow-1 text-justify">
+                                <p>Antes de explicar la lógica de nuestro modelo DQN, vamos a revisar la forma básico de Reinforcment Learning:</p>
+                                <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/dqn-forex/modelo-1.png" alt="" /></span>
+                                <p>Básicamente, nuestra agente realiza una acción, esta acción se impacta en el ambiente, creando una reacción, o no, y el ambiente no retorna un nuevo estado producto de la acción, y el reward obtenido por haber realizado la acción.</p>
+                                <p>Lo único que resta es que nuestro agente aprenda, a partir de los reward que recibe del ambiente, que acciones maximizan el reward, dado un estado determinado.</p>
+                                <p>En DQN vamos a hacer exactamente eso, pero en vez de usar una red neuronal, vamos a usar dos:</p>
+                                <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/dqn-forex/modelo-2.png" alt="" /></span>
+                                <p>¿Por qué necesitamos dos redes neuronales?</p>
+                                <p>Una va a pertenecer a nuestro agente, el cual se va a encargar de dicidir que acciones tomar, y la otra va a funcionar como objetivo para entrenar nuestro agente.</p>
+                                <p>¿Cómo lo haremos?</p>
+                                <p>Vamos a crear una memoria de estados, acciones, siguientes estados y rewards a la que vamos a llamar “Replay buffer” y en esta vamos a guardas las última “X” cantidad de pares previamente mencionados.</p>
+                                <p>Cada cierta cantidad de pasos definidos mediante hiper parámetros, vamos a entrenar nuestro agente con algunos de los escenarios (elegidos al azar) guardados en el Replay buffer.</p>
+                                <p>Este entrenamiento se va a llevar a cabo teniendo como objetivo el output de una red neuronal idéntica a la de nuestro agente.</p>
+                                <p>Cabe destacar que la red neuronal objetivo no se va a entrenar en conjunto con nuestro agente, sino que cada determinada cantidad de pasos “Y” vamos a copiar los weights de la red neuronal de nuestro agente a la de nuestro objetivo.</p>
+                                <p>A esta forma de aprendizaje se le llama “semi-gradient”.</p>
+                                <p>Para redes neuronales, vamos a usar una red secuencial sencilla:</p>
+                                <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/dqn-forex/modelo-3.png" alt="" /></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Entrenamiento -->
+                <section class="resume-section" id="entrenamiento">
+                    <div class="resume-section-content">
+                        <h2 class="mb-5">Entrenamiento</h2>
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                            <div class="flex-grow-1 text-justify">
+                                <div class="subheading mb-3">Setup</div>
+                                <p>Para iniciar nuestro entrenamiento, tenemos que definir variables como nuestro descuento a rewards anteriores, la probabilidad incial de tomar una acción al azar y la cantidad episodios a jugar entre otros:</p>
+                                <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/dqn-forex/entrenamiento 1.png" alt="" /></span>
+                                <p>Iniciamos nuestros placeholder para el replay buffer. el máximo de memoria que estamos dispuestos a conservar en buffer, cantidad de pasos a explorar y nuestro optimizador:</p>
+                                <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/dqn-forex/entrenamiento-2.png" alt="" /></span>
+                                <p>Finalmente podemos iniciar el entrenamiento.</p>
+                                <p>Básicamente vamos a poner todos los pasos que mencionamos en la sección de modelaje en código, por suerte para nosotros Jacob y Mathias hicieron la mayor parte del trabajo en su ejemplo de Deep Q-Learning para Atari Breakout.</p>
+                                <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/dqn-forex/entrenamiento-3.png" alt="" /></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Resultados -->
+                <section class="resume-section" id="resultados">
+                    <div class="resume-section-content">
+                        <h2 class="mb-5">Resultados</h2>
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                            <div class="flex-grow-1 text-justify">
+                                <p>Con nuestro modelo entrenado, ahora vamos a usarlo sobre nuestro data disponible a partir del '01/06/2021' y ver su performance.</p>
+                                <p>Gráfico de la data sobre la que va a trabajar nuestro modelo:</p>
+                                <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/dqn-forex/resultados-1.png" alt="" /></span>
+                                <p>Sin más preámbulos, veamos las acciones tomadas por nuestro agente y los resultados obtenidos:</p>
+                                <p>Acciones tomadas:</p>
+                                <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/dqn-forex/resultados-2.png" alt="" /></span>
+                                <p>Resultados obtenidos:</p>
+                                <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/dqn-forex/resultados-3.png" alt="" /></span>
+                                <p>Exactamente lo que parece, después de 3 días de entrenamiento continuo en mi computadora personal, prendida día y noche, el model ha decidido no realizar ni un solo trade en nuestro dataset de testeo!</p>
+                                <p>Una clara mejora respecto a sus actitudes iniciales de comprar y vender al azar, pero no exactamente algo que no sea útil.</p>
+                                <p>Para mí, los resultados son los esperados, tan solo con darle una red neuronal simple los 20 precios inmediatos anteriores por hora del último año no iba a ser suficiente para desempeñarse exitosamente en el mercado bursátil.</p>
+                                <p>¡Muchas gracias por dedicarle el tiempo a esta lectura!</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Volver -->
+                <div class="back" id="volver">
+                    <a class='btn btn-danger btn-lg mb-3' href="./index.html#proyectos"> Volver a Otros Proyectos </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
