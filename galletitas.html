@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Emanuel Rieiro | Curriculum</title>
+        
+        <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Emanuel Rieiro | Curriculum Vitae" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:description" content="Soy un egresado de Contador Público en la Udelar con amplio estudio en el area de la programación y una pasión por la estadística. Mi perfil esta orientado a la analítica de negocios y al desarrollo de herramientas que permitan controlar, medir y aplicar las políticas organizacionales de manera efectiva para mejorar el rendimiento del negocio." />
+        <meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://emanuel-rieiro.github.io/cv/assets/pautos/frontpage.png" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://emanuel-rieiro.github.io/cv/" />
+
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navegador-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Emanuel Rieiro</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2 img-width" src="assets/img/profile.jpg" alt="" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#resumen">Resumen</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#etiquetado">Etiquetado</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#entrenamiento">Entrenamiento</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#resultados">Resultados</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#referencias">Referencias</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#volver">Volver</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Contenido-->
+        <div class='wrapper mb-6'>
+            <div class="container-fluid p-0">
+                
+                <!-- Título -->
+                <section class="resume-section" id="resumen">
+                    <div class="resume-section-content">
+                        <h1 class="title mb-6">
+                            Reconocimiento de galletitas con
+                            <span class="text-primary">Detecto</span>
+                        </h1>
+                        <h3 class="mb-3">Resumen e Introducción</h3>
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                            <div class="flex-grow-1 text-justify">
+                                <p>Este mini-proyecto forma parte de la serie de mini-proyectos de machine learning, uno por mes durante todo el 2022.</p>
+                                <p>La idea es sencilla, usando la librería <a href="https://detecto.readthedocs.io/en/latest/">Detecto</a> voy a crear correr un algoritmo de reconocimiento de objetos en 4 videos.</p>
+                                <p>Los objetos que debe reconocer son 3 tipos de galletitas distintas: Lulu, Oreo y Solar.</p>
+                                <p>Para ello, voy a entrenar la red neuronal con un conjunto de fotos de estas galletitas, sacadas y etiquetados por mi, usando la librería labelImg.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <hr class="m-0" />
+
+                <!-- Etiquetado -->
+                <section class="resume-section" id="etiquetado">
+                    <div class="resume-section-content">
+                        <h2 class="mb-5">Etiquetado</h2>
+                        <p>Para poder reconocer mi tipo de galletita en un video real, primero necesito un dataset con los tres tipos de galletitas debidamente etiquetado.</p>
+                        <p>Así que, como primer paso, compre un paquete de cada una de las galletitas y las hice pasar por una show de fotografías:</p>
+                        <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/galletitas/image1.jpg" alt="" /></span>
+                        <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/galletitas/image89.jpg" alt="" /></span>
+                        <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/galletitas/image123.jpg" alt="" /></span>
+                        <p>Ahora, para poder etiquetas mis galletitas usé la librería <a href="https://github.com/tzutalin/labelImg">labelImg</a>.</p>
+                        <p>El procedimiento es bastante sencillo. Una vez instalada la librería en el entorno virtual, se debe escribir su comando en la consola. Esto hará que aparezca el siguiente menú:</p>
+                        <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/galletitas/labelimg-inicio.png" alt="" /></span>
+                        <p>Un dato no menor fue que cuando intente usar la librería, mi entorno virtual estaba utilizando Python 3.10, lo cual momento, parecía no ser compatible del todo con labelImg. Por lo cual tuve que crear un nuevo ambiente virtual con Python 3.9</p>
+                        <p>Una vez con labelImg funcionando lo único que hay que hacer es abrir la carpeta donde se encuentran las imagenes a ser etiquetadas, prepararse un mate y etiquetar.</p>
+                        <p>Debo decir que el proceso de etiquetar casi 200 imagenes es largo y tedioso, pero labelImg lo hizo sumamente ágil y disfrutable!</p>
+                        <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/galletitas/labelimg-etiquetado.png" alt="" /></span>
+                    </div>
+                </section>
+                <hr class="m-0" />
+                
+                <!-- Entrenamiento -->
+                <section class="resume-section" id="entrenamiento">
+                    <div class="resume-section-content">
+                        <h2 class="mb-5">Entrenamiento</h2>
+                        <p>El entramiento usando detecto fue sorprendentemente fácil:</p>
+                        <span class="d-lg-block text-center mb-5"><img class="img-fluid img-profile mx-auto border-color" src="assets/galletitas/detecto-entrenamiento.png" alt="" /></span>
+                        <p>Solo 4 líneas de código! 3 si omitimos los import!</p>
+                        <p>Siendo tan breve, explicare línea a línea:</p>
+                        <p>En la primer línea importamos core de la librería Detecto</p>
+                        <p>En la segunda línea definimos una variable "dataset" que va a ser igual al resultado del metodo Dataset de core, y le damos como parametro la dirección de la carpeta donde se encuentran nuestras imagenes etiquetadas para entrenar.</p>
+                        <p>En la tercera línea definimos nuestro modelo, y le pasamos como parámetro una lista con los labels que queremos que aprenda.</p>
+                        <p>Y por último, con un simple mode.fit, usando nuestro dataset como parámetro nuestro model empezara a entrenarse.</p>
+                        <p>En mi ordenador personal tomo un largo tiempo en entrenarse, razón por la cual hice uso de la opción GPU en google colab para entrenar el modelo.</p>
+                    </div>
+                </section>
+                <hr class="m-0" />
+
+                <!-- Resultados -->
+                <section class="resume-section" id="resultados">
+                    <div class="resume-section-content">
+                        <h2 class="mb-5">Resultados</h2>
+                        <p>Considerando la poca cantidad de imagenes etiquetadas (150) considero los resultados un éxito.</p>
+                        <p>Realmente no esperaba mucho, pero lo que vi, me sorprendió. Para su simpleza, detecto es muy bueno, aunque no sin algunas excepciones:</p>
+                        <span class="d-lg-block text-center mb-5"><iframe class="mx-auto border-color" width="560" height="315" src="https://www.youtube.com/embed/EqXcnqKGTes" frameborder="0" allowfullscreen></iframe></span>
+                        <p>Este primer video es de los mejores, podemos ver que hay problemas para detectar objetos en movimiento, y además pareciere estar reconociendo la galletita oreo en la sombre de mi mano.</p>
+                        <span class="d-lg-block text-center mb-5"><iframe class="mx-auto border-color" width="560" height="315" src="https://www.youtube.com/embed/C6n7Kpy810w" frameborder="0" allowfullscreen></iframe></span>
+                        <p>El video de oreo es sin duda el mejor de los 4, claramente el modelo tuvo una mayor facilidad para poder reconocer esta galletita.</p>
+                        <span class="d-lg-block text-center mb-5"><iframe class="mx-auto border-color" width="560" height="315" src="https://www.youtube.com/embed/AcL6xzqNpXA" frameborder="0" allowfullscreen></iframe></span>
+                        <p>Nuevamente se vuelve a ver que identifica oreo en la sombra de mi mano, pero por lo positivo, pareciere identificar la galletita solar correctamente</p>
+                        <span class="d-lg-block text-center mb-5"><iframe class="mx-auto border-color" width="560" height="315" src="https://www.youtube.com/embed/zJJOcjY71qs" frameborder="0" allowfullscreen></iframe></span>
+                        <p>Este es sin duda el peor de los videos, pasa mas tiempo identificado una oreo en la sombra de mi mano que la galletita lulu</p>
+                        <P>En conclusión, creo que con un dataset mas grande de imagenes, y usando técnicas de data augmentation habríamos llegado un modelo muy exitoso, pero para el poco tiempo de dedicación (unas 4 horas) considero a detecto un completo éxito!</P>
+                    </div>
+                </section>
+                <hr class="m-0" />
+
+                <!-- Referencias -->
+                <section class="resume-section" id="referencias">
+                    <div class="resume-section-content">
+                        <h2 class="mb-5">Referencias</h2>
+                        <a href="https://towardsdatascience.com/build-a-custom-trained-object-detection-model-with-5-lines-of-code-713ba7f6c0fb">https://towardsdatascience.com/build-a-custom-trained-object-detection-model-with-5-lines-of-code-713ba7f6c0fb</a>
+                        <br>
+                        <br>
+                        <a href="https://detecto.readthedocs.io/en/latest/index.html">https://detecto.readthedocs.io/en/latest/index.html</a>
+                        <br>
+                        <br>
+                        <a href="https://github.com/tzutalin/labelImg">https://github.com/tzutalin/labelImg</a>
+                    </div>
+                </section>
+                <hr class="m-0" />
+
+                <div class="back" id="volver">
+                    <a class='btn btn-danger btn-lg mb-3' href="./index.html#proyectos"> Volver a Otros Proyectos </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
